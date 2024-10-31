@@ -1,0 +1,19 @@
+header {
+    padding: 30px 250px 30px 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Logo {
+    width: 200px;
+}
+
+@media screen and (max-width: 393px) {
+    header {
+        padding: 0px;
+        margin: 0px;
+        justify-content: center;
+        padding-top: 10px;
+    }
+  }

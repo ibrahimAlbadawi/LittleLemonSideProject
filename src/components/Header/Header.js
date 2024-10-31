@@ -1,10 +1,11 @@
 import React from "react";
-import { ReactComponent as Logo } from "../Assets/Logo.svg";
+import Logo from "../../Assets/logo.png";
 import Nav from "./Nav";
+import './Header.css'
 const Header = () => {
     return (
         <header>
-            <Logo />
+            <a href="#"><img id="Logo" src={Logo} /></a>
             <Nav />
         </header>
     );
