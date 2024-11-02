@@ -1,0 +1,46 @@
+#hero {
+    background-color: #495e57;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 250px 140px 250px;
+    height: 250px;
+}
+
+#hero-text {
+    padding-top: 30px;
+    width: 422px;
+    height: 331px;
+}
+
+#hero-image {
+    float: right;
+    width: 375px;
+    height: 450px;
+    left: 775px;
+    top: 146px;
+    border-radius: 25px;
+}
+
+h1 {
+    height: 60px;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+    color: #F4CE14;
+}
+
+h3 {
+    font-family: "Markazi Text";
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+}
+
+p {
+    padding-top: 26px;
+    padding-bottom: 13px;
+    font-family: "Karla";
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
