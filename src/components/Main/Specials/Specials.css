@@ -1,0 +1,18 @@
+#container {
+    padding: 30px 250px 140px 250px;
+
+    height: 718px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#header {
+    width: 858px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

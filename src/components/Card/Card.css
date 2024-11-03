@@ -1,0 +1,64 @@
+.container {
+    width: 264.67px;
+    height: 439px;
+    background-color: #edefee;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    justify-content: center;
+}
+
+#main-content {
+    padding: 20px 25px;
+    text-align: center;
+}
+
+#dish-image {
+    width: 264.67px;
+    height: 185.26px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.title-price > h4 {
+    font-family: "Markazi Text";
+    font-size: 24px;
+    color: black;
+    padding: 0%;
+}
+
+.title-price > h5 {
+    font-family: "Karla";
+    font-size: 16px;
+    color: #ee9972;
+}
+
+.description {
+    font-family: "Karla";
+    font-size: 16px;
+    color: #495E57;
+    text-align: left;
+    font-weight: 400;
+}
+
+.delivery {
+    width: 148px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery > h3 {
+    font-family: "Karla";
+    font-size: 16px;
+    color: #333333;
+}
+
+.delivery > img {
+    width: 20px;
+}
