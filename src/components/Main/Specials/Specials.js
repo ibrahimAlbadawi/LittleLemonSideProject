@@ -1,13 +1,13 @@
 import React from "react";
 import "./Specials.css";
-import Button from "../../Button/Button";
-import Card from "../../Card/Card";
+import Button from "../../helper components/Button/Button";
+import Card from "../../helper components/Card/Card";
 import {assets} from '../../Assets'
 const Specials = () => {
     return (
-        <div id="container">
+        <div id="specials-container">
             <div id="header">
-                <h1>This weeks specials!</h1>
+                <h1 id="header-title">This weeks specials!</h1>
                 <Button text="Online menu" />
             </div>
             <div className="cards">

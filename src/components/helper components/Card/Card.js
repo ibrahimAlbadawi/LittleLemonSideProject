@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-import { assets } from "../Assets";
+import { assets } from "../../Assets";
 const Card = (props) => {
     return (
         <div class="container center">

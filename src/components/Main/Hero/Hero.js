@@ -1,10 +1,10 @@
 import React from "react";
 import "./Hero.css";
 import { assets } from "../../Assets";
-import Button from "../../Button/Button";
+import Button from "../../helper components/Button/Button";
+
 const Hero = () => {
     return (
-        <div id="main-hero">
             <div id="hero">
                 <div id="hero-text">
                     <h1>Little Lemon</h1>
@@ -14,7 +14,7 @@ const Hero = () => {
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                     </p>
-                    <Button text="Reserve a Table" />
+                    <div id="hero-button"><Button text="Reserve a Table" /></div>
                 </div>
                 <img
                     id="hero-image"
@@ -22,7 +22,6 @@ const Hero = () => {
                     alt="hero-image"
                 />
             </div>
-        </div>
     );
 };
 

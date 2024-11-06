@@ -6,7 +6,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
 }
 
 #button-text {
@@ -15,4 +14,8 @@
     color: black;
     font-family: "Karla";
     font-weight: 800;
+}
+
+#hero-button {
+    padding-top: 50px;
 }
