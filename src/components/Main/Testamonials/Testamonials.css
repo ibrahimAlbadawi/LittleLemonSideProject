@@ -1,20 +1,23 @@
 #testamonials-container {
     height: 560px;
     background-color: #fdf4ee;
-    display: grid;
-    grid-template-areas:
-        "header header header header"
-        "message message message message";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #header {
     color: #495e57;
-    grid-area: header;
+    padding-top: 83px;
+}
+
+#messages-container {
+    display: grid;
+    grid-template-areas: "message message message message";
 }
 
 #message {
     grid-area: message;
     display: flex;
-    justify-content: space-between;
-
+    gap: 100px;
 }

@@ -4,14 +4,15 @@ import TestMessage from "../../helper components/Testamonials-message/TestMessag
 const Testamonials = () => {
     return (
         <div id="testamonials-container">
-            <header id="header">
-                <h1>Testamonials</h1>
-            </header>
-            <div id="message">
-                <TestMessage />
-                <TestMessage />
-                <TestMessage />
-                <TestMessage />
+            <h1 id="header">Testamonials</h1>
+
+            <div id="messages-container">
+                <div id="message">
+                    <TestMessage />
+                    <TestMessage />
+                    <TestMessage />
+                    <TestMessage />
+                </div>
             </div>
         </div>
     );

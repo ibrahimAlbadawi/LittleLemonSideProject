@@ -2,8 +2,8 @@
     background-color: #495e57;
     display: flex;
     justify-content: space-between;
-    padding: 30px 0px 140px 0px;
-    height: 250px;
+    padding: 30px 290px 140px 290px;
+    height: 270px;
 }
 
 #hero-text {
@@ -21,7 +21,7 @@
     border-radius: 25px;
 }
 
-h1 {
+#hero-text > h1 {
     height: 60px;
     font-family: "Markazi Text";
     font-size: 64px;
@@ -29,14 +29,14 @@ h1 {
     color: #F4CE14;
 }
 
-h3 {
+#hero-text > h3 {
     font-family: "Markazi Text";
     font-size: 40px;
     font-weight: 300;
     color: white;
 }
 
-p {
+#hero-text > p {
     padding-top: 26px;
     padding-bottom: 13px;
     font-family: "Karla";

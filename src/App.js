@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer'
 import './App.css'
 const App = () => {
   return (
-    <div>
+    <div id='app'>
      <Header/>
      <Main/>
      <Footer/>

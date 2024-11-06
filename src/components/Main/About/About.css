@@ -1,0 +1,57 @@
+#about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 126px 290px 36px 290px;
+    height: 400px;
+}
+
+#hero-text {
+    padding-top: 30px;
+    width: 422px;
+    height: 331px;
+}
+
+#about-image2 {
+    border-radius: 25px;
+    position: absolute;
+    width: 267.94px;
+    height: 336px;
+    left: 1150px;
+    top: 1980px;
+}
+
+#about-image1 {
+    border-radius: 25px;
+    position: absolute;
+    width: 271.88px;
+    height: 336px;
+    left: 1000px;
+    top: 2060px;
+}
+
+
+h1 {
+    height: 60px;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-weight: 500;
+    color: #495e57;
+}
+
+h3 {
+    font-family: "Markazi Text";
+    font-size: 40px;
+    font-weight: 300;
+    color: #ee9972;
+}
+
+p {
+    padding-top: 26px;
+    padding-bottom: 13px;
+    font-family: "Karla";
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    max-width: 370px;
+    text-align: justify;
+}

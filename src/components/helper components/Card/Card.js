@@ -3,7 +3,7 @@ import "./Card.css";
 import { assets } from "../../Assets";
 const Card = (props) => {
     return (
-        <div class="container center">
+        <div class="card-container">
             <img id="dish-image" src={props.imgSrc} alt="" />
             <div id="main-content">
                 <div className="title-price">
