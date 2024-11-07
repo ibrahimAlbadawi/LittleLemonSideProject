@@ -5,7 +5,7 @@ footer {
     padding: 95px 290px 95px 290px;
 }
 
-#footer-list {
+.footer-list {
     display: block;
     width: 100%;
 }
@@ -15,7 +15,7 @@ h4 {
     padding-bottom: 24px;
 }
 
-#footer-link {
+.footer-link {
     color: white;
     font-weight: normal;
 }

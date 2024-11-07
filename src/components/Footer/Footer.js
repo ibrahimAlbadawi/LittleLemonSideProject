@@ -1,62 +1,76 @@
 import React from "react";
-import FooterLogo from '../../Assets/Capture.png'
-import './Footer.css'
+import FooterLogo from "../../Assets/Capture.png";
+import "./Footer.css";
+import { Outlet, Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <footer>
-            <img src={FooterLogo} alt="Footer-logo" />
+            <a href="./">
+                <img id="Logo" src={FooterLogo} alt="Little lemon" />
+            </a>
             <div>
-                <h4>
-                    Navigation
-                </h4>
-                <ul id="footer-list">
+                <h4>Navigation</h4>
+                <ul class="footer-list">
                     <li>
-                        <a href="#" id="footer-link">Home</a>
+                        <Link to="/Home">Home</Link>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">About</a>
+                        <Link to="/About">About</Link>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">Menu</a>
+                        <Link to="/Menu">Menu</Link>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">Reservations</a>
+                        <Link to="/Reservations">Reservations</Link>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">Order Online</a>
+                        <Link to="/OrderOnline">Order Online</Link>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">Login</a>
+                        <Link to="/Login">Login</Link>
                     </li>
                 </ul>
             </div>
 
             <div>
                 <h4>Contact</h4>
-                <ul id="footer-list">
+                <ul class="footer-list">
                     <li>
-                        <a href="#" id="footer-link">Address</a>
+                        <a href="#" class="footer-link">
+                            Address
+                        </a>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">phone number</a>
+                        <a href="#" class="footer-link">
+                            phone number
+                        </a>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">email</a>
+                        <a href="#" class="footer-link">
+                            email
+                        </a>
                     </li>
                 </ul>
             </div>
 
             <div>
                 <h4>Social Media Links</h4>
-                <ul id="footer-list">
+                <ul class="footer-list">
                     <li>
-                        <a href="#" id="footer-link">Address</a>
+                        <a href="#" class="footer-link">
+                            Address
+                        </a>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">phone number</a>
+                        <a href="#" class="footer-link">
+                            phone number
+                        </a>
                     </li>
                     <li>
-                        <a href="#" id="footer-link">email</a>
+                        <a href="#" class="footer-link">
+                            email
+                        </a>
                     </li>
                 </ul>
             </div>

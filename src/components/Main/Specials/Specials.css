@@ -13,7 +13,7 @@
     grid-area: card;
 }
 
-#header {
+#specials-header {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -6,7 +6,7 @@ import {assets} from '../../Assets'
 const Specials = () => {
     return (
         <div id="specials-container">
-            <div id="header">
+            <div id="specials-header">
                 <h1 id="header-title">This weeks specials!</h1>
                 <Button text="Online menu" />
             </div>
