@@ -1,7 +1,7 @@
 import React from "react";
 import FooterLogo from "../../Assets/Capture.png";
 import "./Footer.css";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
