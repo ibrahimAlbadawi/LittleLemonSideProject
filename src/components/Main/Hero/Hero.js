@@ -2,7 +2,6 @@ import React from "react";
 import "./Hero.css";
 import { assets } from "../../Assets";
 import Button from "../../helper components/Button/Button";
-
 const Hero = () => {
     return (
             <div id="hero">
@@ -14,7 +13,7 @@ const Hero = () => {
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                     </p>
-                    <div id="hero-button"><Button text="Reserve a Table" /></div>
+                    <button id="hero-button"><Button text="Reserve a Table" /></button>
                 </div>
                 <img
                     id="hero-image"

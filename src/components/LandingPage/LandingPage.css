@@ -16,27 +16,24 @@ header {
         justify-content: center;
         padding-top: 10px;
     }
-  }
+}
 
-  ul {
+#landing-page-list {
     width: 600px;
     list-style: none;
     display: flex;
     justify-content: space-between;
     font-family: "Karla", serif;
     font-weight: bold;
-    color: black;
 }
 
-a {
+#landing-page-list a {
     text-decoration: none;
     color: black;
 }
 
 @media screen and (max-width: 393px) {
-    ul {
+    #landing-page-list {
         display: none;
     }
-
-
 }

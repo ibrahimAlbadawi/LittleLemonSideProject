@@ -7,10 +7,10 @@ const Layout = () => {
         <>
             <header>
                 <a href="./">
-                    <img id="Logo" src={Logo} alt="Little lemon"/>
+                    <img id="Logo" src={Logo} alt="Little lemon" />
                 </a>
                 <nav>
-                    <ul>
+                    <ul id="landing-page-list">
                         <li>
                             <Link to="/Home">Home</Link>
                         </li>

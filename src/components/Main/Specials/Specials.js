@@ -8,7 +8,7 @@ const Specials = () => {
         <div id="specials-container">
             <div id="specials-header">
                 <h1 id="header-title">This weeks specials!</h1>
-                <Button text="Online menu" />
+                <button id="specials-button"><Button text="Online menu"/></button>
             </div>
             <div className="cards">
                 <Card dishName="Greek Salad" price="$12.99" description="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. " imgSrc={assets.greeksalad}/>

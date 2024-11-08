@@ -1,11 +1,10 @@
 import React from "react";
-import Main from './components/Main/Main.js'
-import Home from "../src/components/pages/Home";
-import About from "../src/components/pages/About";
-import Menu from "../src/components/pages/Menu";
-import Reservations from "./components/pages/Reservations.js";
-import OrderOnline from "../src/components/pages/OrderOnline";
-import Login from "../src/components/pages/Login";
+import Main from "./components/Main/Main.js";
+import About from "../src/components/Main/About/About.js";
+import Menu from "../src/components/pages/Menu/Menu";
+import Reservations from "./components/pages/Reservations/Reservations.js";
+import OrderOnline from "../src/components/pages/OrderOnline/OrderOnline";
+import Login from "../src/components/pages/Login/Login";
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -18,12 +17,15 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<LandingPage />}>
                         <Route index element={<Main />} />
-                        <Route path="/Home" element={<Home />} />
+                        <Route path="/Home" element={<Main />} />
                         <Route path="/About" element={<About />} />
-                        <Route path="/Menu" element={<Menu />}/>
-                        <Route path="/Reservations" element={<Reservations />}/>
-                        <Route path="/OrderOnline" element={<OrderOnline />}/>
-                        <Route path="/Login" element={<Login />}/>
+                        <Route path="/Menu" element={<Menu />} />
+                        <Route
+                            path="/Reservations"
+                            element={<Reservations />}
+                        />
+                        <Route path="/OrderOnline" element={<OrderOnline />} />
+                        <Route path="/Login" element={<Login />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

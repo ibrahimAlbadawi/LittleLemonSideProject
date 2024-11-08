@@ -27,7 +27,7 @@ const Footer = () => {
                     <li>
                         <Link to="/OrderOnline">Order Online</Link>
                     </li>
-                    <li>
+                    <li class="footer-link">
                         <Link to="/Login">Login</Link>
                     </li>
                 </ul>
@@ -37,19 +37,13 @@ const Footer = () => {
                 <h4>Contact</h4>
                 <ul class="footer-list">
                     <li>
-                        <a href="#" class="footer-link">
-                            Address
-                        </a>
+                        <Link to="https://www.google.com/maps">Address</Link>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
-                            phone number
-                        </a>
+                        <Link to="https://www.whatsapp.com/">Phone Us!</Link>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
-                            email
-                        </a>
+                        <Link to="https://workspace.google.com/gmail/">Email Us!</Link>
                     </li>
                 </ul>
             </div>
@@ -58,19 +52,13 @@ const Footer = () => {
                 <h4>Social Media Links</h4>
                 <ul class="footer-list">
                     <li>
-                        <a href="#" class="footer-link">
-                            Address
-                        </a>
+                        <Link to="https://x.com/">X</Link>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
-                            phone number
-                        </a>
+                        <Link to="https://www.instagram.com/">Instagram</Link>
                     </li>
                     <li>
-                        <a href="#" class="footer-link">
-                            email
-                        </a>
+                        <Link to="https://www.snapchat.com/">Snapchat</Link>
                     </li>
                 </ul>
             </div>
