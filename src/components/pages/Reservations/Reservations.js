@@ -1,10 +1,11 @@
 import React from 'react'
 import './Reservations.css'
+
+import BookingForm from '../../helper components/BookingForm/BookingForm'
 const Reservations = () => {
   return (
     <div id='reservations-container'>
-      Reservations page
-      *use a form here
+      <BookingForm/>
     </div>
   )
 }

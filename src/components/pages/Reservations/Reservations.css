@@ -1,4 +1,6 @@
 #reservations-container {
-    height: 500px;
+    
+    padding-top: 50px;
+    height: 100vh;
     text-align: center;
 }
