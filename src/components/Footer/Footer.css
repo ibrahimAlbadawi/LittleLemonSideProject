@@ -12,6 +12,14 @@ footer {
 .footer-list a {
     color: white;
     text-decoration: none;
+    transition: 0.2s;
+    
+}
+
+.footer-list a:hover{
+    text-decoration: none;
+    color: #f4ce14;
+
 }
 
 h4 {

@@ -3,24 +3,19 @@
     width: 200px;
     height: 60px;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.5s;
-}
-
-#button:hover {
-    background-color: #e0bd09;
-}
-
-#button-text {
-    padding: 0px;
+    border: none;
     font-size: 18px;
     color: black;
     font-family: "Karla";
     font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
 }
 
-#hero-button {
-    padding-top: 50px;
+#button:hover {
+    color: #f4ce14;
+    border: #f4ce14 3px solid;
+    background-color: white;
 }

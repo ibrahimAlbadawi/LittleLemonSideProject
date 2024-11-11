@@ -30,6 +30,13 @@ header {
 #landing-page-list a {
     text-decoration: none;
     color: black;
+    transition:  0.2s;
+}
+
+#landing-page-list a:hover {
+    font-size:22px;
+    text-decoration: none;
+    color: #f4ce14;
 }
 
 @media screen and (max-width: 393px) {
