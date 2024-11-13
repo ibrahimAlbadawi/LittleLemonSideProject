@@ -1,0 +1,31 @@
+#card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 90px;
+    background-color: #ee9972;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#card-info {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+#card-title {
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.card-date-time {
+    padding: 0px;
+    color: rgb(131, 0, 0);
+}
+
+.span-higlight {
+    color: white;
+}

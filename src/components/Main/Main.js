@@ -9,7 +9,6 @@ const Main = (props) => {
   return (
     <main>
       <Hero infos={props.infos}/>
-      <h1>{props.infos.firstName}</h1>
       <Specials/>
       <Testamonials/>
       <About/>

@@ -12,7 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
     const [infos, setInfos] = useState({
-        firstName: "",
+        firstName: null,
         lastName: "",
         email: "",
         date: "", //add date picker library here
@@ -25,7 +25,7 @@ const App = () => {
 
     const handleChange = (e) => {
         setInfos({ ...infos, [e.target.name]: [e.target.value] });
-        console.log(infos)
+        console.log(infos);
     };
 
     return (
@@ -33,8 +33,26 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<LandingPage />}>
-                        <Route index element={<Main infos={infos} />} />
-                        <Route path="/Home" element={<Main />} />
+                        <Route
+                            index
+                            element={
+                                <Main
+                                    infos={infos}
+                                    setInfos={setInfos}
+                                    handleChange={handleChange}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/Home"
+                            element={
+                                <Main
+                                    infos={infos}
+                                    setInfos={setInfos}
+                                    handleChange={handleChange}
+                                />
+                            }
+                        />
                         <Route path="/About" element={<About />} />
                         <Route path="/Menu" element={<Menu />} />
                         <Route
