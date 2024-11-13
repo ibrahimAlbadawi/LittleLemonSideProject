@@ -4,10 +4,11 @@ import Menu from "../src/components/pages/Menu/Menu";
 import Reservations from "./components/pages/Reservations/Reservations.js";
 import OrderOnline from "../src/components/pages/OrderOnline/OrderOnline";
 import Login from "../src/components/pages/Login/Login";
-import LandingPage from "./components/LandingPage/LandingPage.js";
 import "./App.css";
+import LandingPage from "./components/LandingPage/LandingPage.js";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { Context } from "./components/helper components/EventContext.js";
 
 const App = () => {
     const [infos, setInfos] = useState({
@@ -20,8 +21,11 @@ const App = () => {
         occasion: "", //make it options birthday, annivrsary, other
     });
 
-    const handleChange = (event) => {
-        setInfos({ ...infos, [event.target.name]: [event.target.value] });
+    // const { eventContext, setEventContext } = useContext(Context);
+
+    const handleChange = (e) => {
+        setInfos({ ...infos, [e.target.name]: [e.target.value] });
+        console.log(infos)
     };
 
     return (

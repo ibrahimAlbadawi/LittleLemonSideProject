@@ -1,7 +1,8 @@
 import React from "react";
 // import { useState } from "react";
 import "./BookingForm.css";
-
+// import { Context } from "../EventContext";
+// import { useContext } from "react";
 const BookingForm = (props) => {
     //DONE STATE LIFTING TO App.js
     // const [infos, setInfos] = useState({
@@ -14,13 +15,16 @@ const BookingForm = (props) => {
     //     occasion: "", //make it options birthday, annivrsary, other
     // });
 
-    const handleChange = (e) => {
-        props.setInfos({ ...props.infos, [e.target.name]: [e.target.value] });
-    };
+    // const { setEventContext } = useContext(Context);
+
+    // const handleChange = (e) => {
+    //     setEventContext(e);
+    //     props.setInfos({ ...props.infos, [e.target.name]: [e.target.value] });
+    // };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(props.infos);
+        // console.log(props.infos);
         resetInputs();
         console.log("form submitted!");
     };
@@ -79,7 +83,7 @@ const BookingForm = (props) => {
                         type="text"
                         value={props.infos.firstName}
                         name="firstName"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                         placeholder="Enter first name"
                         required
                     />
@@ -90,7 +94,7 @@ const BookingForm = (props) => {
                         type="text"
                         value={props.infos.lastName}
                         name="lastName"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                         placeholder="Enter last name"
                         required
                     />
@@ -101,7 +105,7 @@ const BookingForm = (props) => {
                         type="email"
                         value={props.infos.email}
                         name="email"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                         placeholder="Enter your email"
                         required
                     />
@@ -112,7 +116,7 @@ const BookingForm = (props) => {
                         type="date"
                         value={props.infos.date}
                         name="date"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                         placeholder="Enter your email"
                         required
                     />
@@ -121,7 +125,7 @@ const BookingForm = (props) => {
                     <select
                         name="time"
                         id="time"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                     >
                         <optgroup label="Day">
                             {dayTimes.map((time) => (
@@ -139,7 +143,7 @@ const BookingForm = (props) => {
                     <select
                         name="numOfGuests"
                         id="numOfGuests"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                     >
                         {numOfGuests.map((num) => (
                             <option value={num.value}>{num.label}</option>
@@ -150,7 +154,7 @@ const BookingForm = (props) => {
                     <select
                         name="occasion"
                         id="occasion"
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => props.handleChange(e)}
                     >
                         {occasions.map((occasion) => (
                             <option value={occasion.value}>

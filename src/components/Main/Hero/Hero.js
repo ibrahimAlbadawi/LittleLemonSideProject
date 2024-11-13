@@ -20,7 +20,7 @@ const Hero = (props) => {
                     src={assets.restauranfood}
                     alt="hero-image"
                 />
-                {(props.infos !== '' && props.infos !== '')&& <h1 style={{color: 'black'}}>hello</h1>}
+                <h1 style={{color: 'black'}}>{props.infos.firstName}</h1>
             </div>
     );
 };
