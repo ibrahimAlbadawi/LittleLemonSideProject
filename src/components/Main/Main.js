@@ -4,10 +4,11 @@ import Hero from './Hero/Hero'
 import Specials from './Specials/Specials'
 import Testamonials from './Testamonials/Testamonials'
 import About from './About/About'
-const Main = () => {
+const Main = (props) => {
+
   return (
     <main>
-      <Hero/>
+      <Hero infos={props.infos}/>
       <Specials/>
       <Testamonials/>
       <About/>

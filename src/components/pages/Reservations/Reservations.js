@@ -1,13 +1,15 @@
-import React from 'react'
-import './Reservations.css'
+import React from "react";
+import "./Reservations.css";
+import BookingForm from "../../helper components/BookingForm/BookingForm";
 
-import BookingForm from '../../helper components/BookingForm/BookingForm'
-const Reservations = () => {
-  return (
-    <div id='reservations-container'>
-      <BookingForm/>
-    </div>
-  )
-}
+const Reservations = (props) => {
 
-export default Reservations
+
+    return (
+        <div id="reservations-container">
+            <BookingForm infos={props.infos} setInfos={props.setInfos} handleChange={props.handleChange} />
+        </div>
+    );
+};
+
+export default Reservations;

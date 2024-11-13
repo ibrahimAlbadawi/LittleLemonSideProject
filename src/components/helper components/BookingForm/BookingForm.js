@@ -1,30 +1,32 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import "./BookingForm.css";
-const BookingForm = () => {
-    const [infos, setInfos] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        date: "", //add date picker library here
-        time: "", //make it options where each one is 2 hours in length
-        numOfGuests: "", //make it options 1-2 ...  10+
-        occasion: "", //make it options birthday, annivrsary, other
-    });
+
+const BookingForm = (props) => {
+    //DONE STATE LIFTING TO App.js
+    // const [infos, setInfos] = useState({
+    //     firstName: "",
+    //     lastName: "",
+    //     email: "",
+    //     date: "", //add date picker library here
+    //     time: "", //make it options where each one is 2 hours in length
+    //     numOfGuests: "", //make it options 1-2 ...  10+
+    //     occasion: "", //make it options birthday, annivrsary, other
+    // });
 
     const handleChange = (e) => {
-        setInfos({ ...infos, [e.target.name]: [e.target.value] });
+        props.setInfos({ ...props.infos, [e.target.name]: [e.target.value] });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(infos);
+        console.log(props.infos);
         resetInputs();
         console.log("form submitted!");
     };
 
     const resetInputs = () => {
-        setInfos({
+        props.setInfos({
             firstName: "",
             lastName: "",
             email: "",
@@ -75,7 +77,7 @@ const BookingForm = () => {
                     <input
                         id="firstName"
                         type="text"
-                        value={infos.firstName}
+                        value={props.infos.firstName}
                         name="firstName"
                         onChange={(e) => handleChange(e)}
                         placeholder="Enter first name"
@@ -86,7 +88,7 @@ const BookingForm = () => {
                     <input
                         id="lastName"
                         type="text"
-                        value={infos.lastName}
+                        value={props.infos.lastName}
                         name="lastName"
                         onChange={(e) => handleChange(e)}
                         placeholder="Enter last name"
@@ -97,7 +99,7 @@ const BookingForm = () => {
                     <input
                         id="email"
                         type="email"
-                        value={infos.email}
+                        value={props.infos.email}
                         name="email"
                         onChange={(e) => handleChange(e)}
                         placeholder="Enter your email"
@@ -108,7 +110,7 @@ const BookingForm = () => {
                     <input
                         id="date"
                         type="date"
-                        value={infos.date}
+                        value={props.infos.date}
                         name="date"
                         onChange={(e) => handleChange(e)}
                         placeholder="Enter your email"

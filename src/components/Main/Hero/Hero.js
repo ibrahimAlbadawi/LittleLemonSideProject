@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import { assets } from "../../Assets";
 import Button from "../../helper components/Button/Button";
-const Hero = () => {
+const Hero = (props) => {
     return (
             <div id="hero">
                 <div id="hero-text">
@@ -20,6 +20,7 @@ const Hero = () => {
                     src={assets.restauranfood}
                     alt="hero-image"
                 />
+                {(props.infos !== '' && props.infos !== '')&& <h1 style={{color: 'black'}}>hello</h1>}
             </div>
     );
 };
