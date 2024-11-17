@@ -6,13 +6,13 @@ import OrderOnline from "../src/components/pages/OrderOnline/OrderOnline";
 import Login from "../src/components/pages/Login/Login";
 import "./App.css";
 import LandingPage from "./components/LandingPage/LandingPage.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { Context } from "./components/helper components/EventContext.js";
 
 const App = () => {
     const [infos, setInfos] = useState({
-        firstName: null,
+        firstName: "",
         lastName: "",
         email: "",
         date: "", //add date picker library here
@@ -24,9 +24,13 @@ const App = () => {
     // const { eventContext, setEventContext } = useContext(Context);
 
     const handleChange = (e) => {
-        setInfos({ ...infos, [e.target.name]: [e.target.value] });
-        console.log(infos);
+        setInfos({ ...infos, [e.target.name]: e.target.value });
+        console.log(infos)//this line will print the current state and not the updated state that happened the previous line
     };
+
+    useEffect(() => {//we use the useEffect hook here in order to tell React to update the infos state we it lies in app and all of it's children
+        console.log("State updated:", infos);
+    }, [infos]);
 
     return (
         <div id="app">

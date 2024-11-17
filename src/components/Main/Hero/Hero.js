@@ -10,8 +10,8 @@ const Hero = (props) => {
             {props.infos.date !== "" && props.infos.time !== "" && (
                 <div id="hero-booking-message">
                     <BookingMessage
-                        date={props.infos.date}
-                        time={props.infos.time}
+                        infos = {props.infos}
+                        // handleChange ={props.handleChange}
                     />
                 </div>
             )}
