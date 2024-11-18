@@ -1,5 +1,5 @@
 import React from "react";
-// import { useState } from "react";
+import { useState } from "react";
 import "./BookingForm.css";
 // import { Context } from "../EventContext";
 // import { useContext } from "react";
@@ -21,12 +21,63 @@ const BookingForm = (props) => {
     //     setEventContext(e);
     //     props.setInfos({ ...props.infos, [e.target.name]: [e.target.value] });
     // };
+    const [errors, setErrors] = useState({});
 
+    const validateForm = (props) => {
+        const errors = {};
+
+        if (!props.infos.firstName.trim()) {
+            errors.firstName = "First name is required";
+        } else if (props.infos.firstName.length < 2) {
+            errors.firstName = "First name must be at least 2 characters long";
+        }
+
+        if (!props.infos.lastName.trim()) {
+            errors.lastName = "Last name is required";
+        } else if (props.infos.lastName.length < 2) {
+            errors.lastName = "Last name must be at least 2 characters long";
+        }
+
+        if (!props.infos.email.trim()) {
+            errors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(props.infos.email)) {
+            errors.email = "Email is invalid";
+        }
+
+        if (!props.infos.date) {
+            errors.date = "Date is required";
+        }
+
+        if (!props.infos.time) {
+            errors.time = "Time is required";
+        }
+
+        if (!props.infos.numOfGuests) {
+            errors.numOfGuests = "Number of guests is required";
+        }
+
+        if (!props.infos.occasion) {
+            errors.occasion = "Occasion is required";
+        }
+        return errors;
+    };
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(props.infos);
-        resetInputs();
-        console.log("form submitted!");
+        // console.log(props.infos);
+        const newErrors = validateForm(props);
+        setErrors(newErrors);
+        console.log(errors);
+        
+        if (Object.keys(errors).length === 0) {
+            console.log(Object.keys(errors).length);
+            console.log("form submitted!");
+            resetInputs();
+        } else {
+            console.log(
+                "form hasn't been submitted, make sure your inputs match the required specifications"
+            );
+        }
     };
 
     const resetInputs = () => {
@@ -40,6 +91,8 @@ const BookingForm = (props) => {
             occasion: "",
         });
     };
+
+    const today = new Date().toISOString().split("T")[0];
 
     const dayTimes = [
         { label: "10:00am-11:30am", value: "10am" },
@@ -85,8 +138,10 @@ const BookingForm = (props) => {
                         name="firstName"
                         onChange={(e) => props.handleChange(e)}
                         placeholder="Enter first name"
-                        required
                     />
+                    {errors.firstName && (
+                        <p className="error-message">{errors.firstName}</p>
+                    )}
 
                     <label htmlFor="lastName">Last Name*</label>
                     <input
@@ -96,8 +151,10 @@ const BookingForm = (props) => {
                         name="lastName"
                         onChange={(e) => props.handleChange(e)}
                         placeholder="Enter last name"
-                        required
                     />
+                    {errors.lastName && (
+                        <p className="error-message">{errors.lastName}</p>
+                    )}
 
                     <label htmlFor="email">Email*</label>
                     <input
@@ -107,8 +164,10 @@ const BookingForm = (props) => {
                         name="email"
                         onChange={(e) => props.handleChange(e)}
                         placeholder="Enter your email"
-                        required
                     />
+                    {errors.email && (
+                        <p className="error-message">{errors.email}</p>
+                    )}
 
                     <label htmlFor="date">Date*</label>
                     <input
@@ -117,9 +176,12 @@ const BookingForm = (props) => {
                         value={props.infos.date}
                         name="date"
                         onChange={(e) => props.handleChange(e)}
+                        min={today}
                         placeholder="Enter your email"
-                        required
                     />
+                    {errors.date && (
+                        <p className="error-message">{errors.date}</p>
+                    )}
 
                     <label htmlFor="time">Time*</label>
                     <select
@@ -138,6 +200,9 @@ const BookingForm = (props) => {
                             ))}
                         </optgroup>
                     </select>
+                    {errors.time && (
+                        <p className="error-message">{errors.time}</p>
+                    )}
 
                     <label htmlFor="numOfGuests">Number of guests*</label>
                     <select
@@ -149,6 +214,9 @@ const BookingForm = (props) => {
                             <option value={num.value}>{num.label}</option>
                         ))}
                     </select>
+                    {errors.numOfGuests && (
+                        <p className="error-message">{errors.numOfGuests}</p>
+                    )}
 
                     <label htmlFor="occasion">Occasion*</label>
                     <select
@@ -162,6 +230,9 @@ const BookingForm = (props) => {
                             </option>
                         ))}
                     </select>
+                    {errors.occasion && (
+                        <p className="error-message">{errors.occasion}</p>
+                    )}
                 </div>
 
                 <button type="submit" id="booking-button">

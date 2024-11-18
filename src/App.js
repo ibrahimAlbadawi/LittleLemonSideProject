@@ -25,7 +25,7 @@ const App = () => {
 
     const handleChange = (e) => {
         setInfos({ ...infos, [e.target.name]: e.target.value });
-        console.log(infos)//this line will print the current state and not the updated state that happened the previous line
+        // console.log(infos)//this line will print the current state and not the updated state that happened the previous line
     };
 
     useEffect(() => {//we use the useEffect hook here in order to tell React to update the infos state we it lies in app and all of it's children
