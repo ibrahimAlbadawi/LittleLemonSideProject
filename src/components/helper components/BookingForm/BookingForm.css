@@ -77,3 +77,10 @@ select:hover {
     border-radius: 15px;
     background-color: white;
 }
+
+.error-message {
+    padding-top: 0;
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: #ad0000;
+}
