@@ -8,7 +8,6 @@ import "./App.css";
 import LandingPage from "./components/LandingPage/LandingPage.js";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { Context } from "./components/helper components/EventContext.js";
 
 const App = () => {
     const [infos, setInfos] = useState({
@@ -19,17 +18,27 @@ const App = () => {
         time: "", //make it options where each one is 2 hours in length
         numOfGuests: "", //make it options 1-2 ...  10+
         occasion: "", //make it options birthday, annivrsary, other
+        isSubmitted: false,
     });
 
-    // const { eventContext, setEventContext } = useContext(Context);
-
     const handleChange = (e) => {
-        setInfos({ ...infos, [e.target.name]: e.target.value });
-        // console.log(infos)//this line will print the current state and not the updated state that happened the previous line
+        if (e.target.type === "submit") {
+            if (
+                infos.firstName !== "" &&
+                infos.lastName !== "" &&
+                infos.email !== "" &&
+                infos.date !== "" &&
+                infos.time !== "" &&
+                infos.numOfGuests !== "" &&
+                infos.occasion !== ""
+            )
+                setInfos({ ...infos, isSubmitted: true });
+            console.log(infos);
+        } else setInfos({ ...infos, [e.target.name]: e.target.value });
     };
 
-    useEffect(() => {//we use the useEffect hook here in order to tell React to update the infos state we it lies in app and all of it's children
-        console.log("State updated:", infos);
+    useEffect(() => {
+        //we use the useEffect hook here in order to tell React to update the infos state we it lies in app and all of it's children
     }, [infos]);
 
     return (

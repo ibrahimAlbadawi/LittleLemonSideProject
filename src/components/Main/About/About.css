@@ -1,7 +1,7 @@
 #about-container {
     display: flex;
     justify-content: space-between;
-    padding: 126px 290px 36px 290px;
+    padding: 126px 290px 126px 290px;
     height: 400px;
 }
 
@@ -11,22 +11,26 @@
     height: 331px;
 }
 
+#images-container {
+    position: relative;
+}
+
 #about-image2 {
+    /* position: absolute; */
     border-radius: 25px;
-    position: absolute;
     width: 267.94px;
     height: 336px;
-    left: 1150px;
-    top: 1980px;
+
 }
 
 #about-image1 {
-    border-radius: 25px;
     position: absolute;
+    border-radius: 25px;
     width: 271.88px;
     height: 336px;
-    left: 1000px;
-    top: 2060px;
+    right: 100px;
+    top: 100px;
+
 }
 
 
@@ -53,5 +57,5 @@ p {
     font-weight: bold;
     color: #000000;
     max-width: 370px;
-    text-align: justify;
+    text-align:justify;
 }

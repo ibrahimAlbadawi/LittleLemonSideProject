@@ -11,10 +11,10 @@ const Card = (props) => {
                     <h5>{props.price}</h5>
                 </div>
                 <p className="description">{props.description}</p>
-                <div className="delivery">
-                    <h3>Order for delivery</h3>
-                    <img src={assets.homeicon} alt="" />
-                </div>
+            </div>
+            <div className="delivery">
+                <h3>Available for delivery</h3>
+                <img src={assets.homeicon} alt="" />
             </div>
         </div>
     );

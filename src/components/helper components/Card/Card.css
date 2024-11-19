@@ -4,7 +4,8 @@
     background-color: #edefee;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #main-content {
@@ -48,9 +49,15 @@
 }
 
 .delivery {
-    width: 148px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 175px;
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-left: 25px;
 }
 
 .delivery > h3 {

@@ -7,7 +7,9 @@ const Footer = () => {
     return (
         <footer>
             <a href="./">
-                <img id="Logo" src={FooterLogo} alt="Little lemon" />
+                <Link to="/Home">
+                    <img id="Logo" src={FooterLogo} alt="Little lemon" />
+                </Link>
             </a>
             <div>
                 <h4>Navigation</h4>
@@ -43,7 +45,9 @@ const Footer = () => {
                         <Link to="https://www.whatsapp.com/">Phone Us!</Link>
                     </li>
                     <li>
-                        <Link to="https://workspace.google.com/gmail/">Email Us!</Link>
+                        <Link to="https://workspace.google.com/gmail/">
+                            Email Us!
+                        </Link>
                     </li>
                 </ul>
             </div>

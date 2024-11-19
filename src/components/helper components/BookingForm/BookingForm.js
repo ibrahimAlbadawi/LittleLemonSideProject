@@ -1,31 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./BookingForm.css";
-// import { Context } from "../EventContext";
-// import { useContext } from "react";
+
 const BookingForm = (props) => {
-    //DONE STATE LIFTING TO App.js
-    // const [infos, setInfos] = useState({
-    //     firstName: "",
-    //     lastName: "",
-    //     email: "",
-    //     date: "", //add date picker library here
-    //     time: "", //make it options where each one is 2 hours in length
-    //     numOfGuests: "", //make it options 1-2 ...  10+
-    //     occasion: "", //make it options birthday, annivrsary, other
-    // });
-
-    // const { setEventContext } = useContext(Context);
-
-    // const handleChange = (e) => {
-    //     setEventContext(e);
-    //     props.setInfos({ ...props.infos, [e.target.name]: [e.target.value] });
-    // };
     const [errors, setErrors] = useState({});
 
     const validateForm = (props) => {
-        const errors = {};
-
         if (!props.infos.firstName.trim()) {
             errors.firstName = "First name is required";
         } else if (props.infos.firstName.length < 2) {
@@ -59,24 +39,24 @@ const BookingForm = (props) => {
         if (!props.infos.occasion) {
             errors.occasion = "Occasion is required";
         }
-        return errors;
     };
-    
+
+    useEffect(() => {}, [errors]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(props.infos);
-        const newErrors = validateForm(props);
-        setErrors(newErrors);
-        console.log(errors);
-        
+        validateForm(props);
+
         if (Object.keys(errors).length === 0) {
-            console.log(Object.keys(errors).length);
             console.log("form submitted!");
-            resetInputs();
+            // resetInputs();
         } else {
             console.log(
                 "form hasn't been submitted, make sure your inputs match the required specifications"
             );
+            console.log(Object.keys(errors).length);
+            console.log(errors)
+            // setErrors({});
         }
     };
 
@@ -116,12 +96,12 @@ const BookingForm = (props) => {
         { label: "5", value: "5" },
         { label: "6", value: "6" },
         { label: "7", value: "7" },
-        { label: "8 or more", value: "8+" },
+        { label: "8 or more", value: "+8" },
     ];
 
     const occasions = [
         { label: "Anniversary", value: "anniversary" },
-        { label: "Birthday", value: "birhday" },
+        { label: "Birthday", value: "birthday" },
         { label: "Other occasion", value: "else" },
     ];
 
@@ -189,6 +169,7 @@ const BookingForm = (props) => {
                         id="time"
                         onChange={(e) => props.handleChange(e)}
                     >
+                        <option disabled selected value>Select a time</option>
                         <optgroup label="Day">
                             {dayTimes.map((time) => (
                                 <option value={time.value}>{time.label}</option>
@@ -210,6 +191,8 @@ const BookingForm = (props) => {
                         id="numOfGuests"
                         onChange={(e) => props.handleChange(e)}
                     >
+                          <option disabled selected value>Select number of guests</option>
+
                         {numOfGuests.map((num) => (
                             <option value={num.value}>{num.label}</option>
                         ))}
@@ -224,6 +207,8 @@ const BookingForm = (props) => {
                         id="occasion"
                         onChange={(e) => props.handleChange(e)}
                     >
+                          <option disabled selected value>Select occasion</option>
+
                         {occasions.map((occasion) => (
                             <option value={occasion.value}>
                                 {occasion.label}
@@ -235,7 +220,7 @@ const BookingForm = (props) => {
                     )}
                 </div>
 
-                <button type="submit" id="booking-button">
+                <button type="submit" id="booking-button" onClick={(e) =>props.handleChange(e)}>
                     Book a table
                 </button>
             </form>
