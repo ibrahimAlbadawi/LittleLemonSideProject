@@ -59,3 +59,43 @@ p {
     max-width: 370px;
     text-align:justify;
 }
+
+@media screen and (max-width: 393px) {
+    #about-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+        margin: 0px;
+        height: 400px;
+    }
+    
+    #hero-text {
+        padding-top: 30px;
+        width: 200px;
+        height: 331px;
+    }
+    
+    #images-container {
+        position: relative;
+    }
+    
+    #about-image2 {
+        /* position: absolute; */
+        border-radius: 25px;
+        width: 267.94px;
+        height: 336px;
+    
+    }
+    
+    #about-image1 {
+        position: absolute;
+        border-radius: 25px;
+        width: 271.88px;
+        height: 336px;
+        right: 100px;
+        top: 100px;
+    
+    }
+
+}
+

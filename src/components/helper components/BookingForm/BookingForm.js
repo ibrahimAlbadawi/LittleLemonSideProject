@@ -2,42 +2,88 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./BookingForm.css";
 
+//Here is a weird thing that is happening right now with this code in this state...
+//at the moment everything seems to work just fine but here is the catch...
+//if I hit submit without filling or choosing any option, It will display all the errors message
+//and the errors state will be filled with all of the errors messages EXCEPT the one with the are input type "text"
+//and it will be filled with them if I hit another submit...wierd isn't it?!
+
 const BookingForm = (props) => {
     const [errors, setErrors] = useState({});
 
     const validateForm = (props) => {
         if (!props.infos.firstName.trim()) {
-            errors.firstName = "First name is required";
+            // errors.firstName = "First name is required";
+            setErrors((errors) => ({
+                ...errors,
+                firstName: "First name is required",
+            }));
         } else if (props.infos.firstName.length < 2) {
-            errors.firstName = "First name must be at least 2 characters long";
+            // errors.firstName = "First name must be at least 2 characters long";
+            setErrors((errors) => ({
+                ...errors,
+                firstName: "First name must be at least 2 characters long",
+            }));
         }
 
         if (!props.infos.lastName.trim()) {
-            errors.lastName = "Last name is required";
+            // errors.lastName = "Last name is required";
+            setErrors((errors) => ({
+                ...errors,
+                lastName: "Last name is required",
+            }));
         } else if (props.infos.lastName.length < 2) {
-            errors.lastName = "Last name must be at least 2 characters long";
+            // errors.lastName = "Last name must be at least 2 characters long";
+            setErrors((errors) => ({
+                ...errors,
+                lastName: "Last name must be at least 2 characters long",
+            }));
         }
 
         if (!props.infos.email.trim()) {
-            errors.email = "Email is required";
+            // errors.email = "Email is required";
+            setErrors((errors) => ({
+                ...errors,
+                email: "Email is required",
+            }));
         } else if (!/\S+@\S+\.\S+/.test(props.infos.email)) {
             errors.email = "Email is invalid";
+            setErrors((errors) => ({
+                ...errors,
+                email: "Email is invalid",
+            }));
         }
 
         if (!props.infos.date) {
             errors.date = "Date is required";
+            setErrors((errors) => ({
+                ...errors,
+                date: "Date is required",
+            }));
         }
 
         if (!props.infos.time) {
             errors.time = "Time is required";
+            setErrors((errors) => ({
+                ...errors,
+                time: "Time is required",
+            }));
         }
 
         if (!props.infos.numOfGuests) {
             errors.numOfGuests = "Number of guests is required";
+            setErrors((errors) => ({
+                ...errors,
+                numOfGuests: "Number of guests is required",
+            }));
         }
 
         if (!props.infos.occasion) {
             errors.occasion = "Occasion is required";
+            setErrors((errors) => ({
+                ...errors,
+                occasion: "Occasion is required",
+            }));
         }
     };
 
@@ -55,22 +101,22 @@ const BookingForm = (props) => {
                 "form hasn't been submitted, make sure your inputs match the required specifications"
             );
             console.log(Object.keys(errors).length);
-            console.log(errors)
+            console.log(errors);
             // setErrors({});
         }
     };
 
-    const resetInputs = () => {
-        props.setInfos({
-            firstName: "",
-            lastName: "",
-            email: "",
-            date: "",
-            time: "",
-            numOfGuests: "",
-            occasion: "",
-        });
-    };
+    // const resetInputs = () => {
+    //     props.setInfos({
+    //         firstName: "",
+    //         lastName: "",
+    //         email: "",
+    //         date: "",
+    //         time: "",
+    //         numOfGuests: "",
+    //         occasion: "",
+    //     });
+    // };
 
     const today = new Date().toISOString().split("T")[0];
 
@@ -169,7 +215,9 @@ const BookingForm = (props) => {
                         id="time"
                         onChange={(e) => props.handleChange(e)}
                     >
-                        <option disabled selected value>Select a time</option>
+                        <option disabled selected value>
+                            Select a time
+                        </option>
                         <optgroup label="Day">
                             {dayTimes.map((time) => (
                                 <option value={time.value}>{time.label}</option>
@@ -191,7 +239,9 @@ const BookingForm = (props) => {
                         id="numOfGuests"
                         onChange={(e) => props.handleChange(e)}
                     >
-                          <option disabled selected value>Select number of guests</option>
+                        <option disabled selected value>
+                            Select number of guests
+                        </option>
 
                         {numOfGuests.map((num) => (
                             <option value={num.value}>{num.label}</option>
@@ -207,7 +257,9 @@ const BookingForm = (props) => {
                         id="occasion"
                         onChange={(e) => props.handleChange(e)}
                     >
-                          <option disabled selected value>Select occasion</option>
+                        <option disabled selected value>
+                            Select occasion
+                        </option>
 
                         {occasions.map((occasion) => (
                             <option value={occasion.value}>
@@ -220,7 +272,11 @@ const BookingForm = (props) => {
                     )}
                 </div>
 
-                <button type="submit" id="booking-button" onClick={(e) =>props.handleChange(e)}>
+                <button
+                    type="submit"
+                    id="booking-button"
+                    onClick={(e) => props.handleChange(e)}
+                >
                     Book a table
                 </button>
             </form>
