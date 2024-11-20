@@ -5,7 +5,7 @@
     height: 400px;
 }
 
-#hero-text {
+#about-text {
     padding-top: 30px;
     width: 422px;
     height: 331px;
@@ -20,7 +20,6 @@
     border-radius: 25px;
     width: 267.94px;
     height: 336px;
-
 }
 
 #about-image1 {
@@ -30,11 +29,9 @@
     height: 336px;
     right: 100px;
     top: 100px;
-
 }
 
-
-h1 {
+#about-h1 {
     height: 60px;
     font-family: "Markazi Text";
     font-size: 64px;
@@ -42,14 +39,14 @@ h1 {
     color: #495e57;
 }
 
-h3 {
+#about-h3 {
     font-family: "Markazi Text";
     font-size: 40px;
     font-weight: 300;
     color: #ee9972;
 }
 
-p {
+#about-p {
     padding-top: 26px;
     padding-bottom: 13px;
     font-family: "Karla";
@@ -57,45 +54,74 @@ p {
     font-weight: bold;
     color: #000000;
     max-width: 370px;
-    text-align:justify;
+    text-align: justify;
 }
 
 @media screen and (max-width: 393px) {
     #about-container {
         display: flex;
-        justify-content: space-between;
-        padding: 0px;
-        margin: 0px;
-        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 30px 140px 30px;
+        height: 550px;
     }
-    
-    #hero-text {
+
+    #about-text {
         padding-top: 30px;
-        width: 200px;
+        width: 300px;
         height: 331px;
     }
-    
+
     #images-container {
         position: relative;
     }
-    
+
     #about-image2 {
-        /* position: absolute; */
+        position: absolute;
         border-radius: 25px;
         width: 267.94px;
         height: 336px;
-    
     }
-    
+
     #about-image1 {
         position: absolute;
         border-radius: 25px;
-        width: 271.88px;
+        width: 267.94px;
         height: 336px;
         right: 100px;
         top: 100px;
-    
     }
-
 }
 
+@media screen and (max-width: 393px) {
+    #about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 30px 80px 30px;
+        height: auto;
+    }
+
+    #images-container {
+        padding-top: 150px;
+        position: relative;
+        display: flex;
+        gap: 10px;
+    }
+
+    #about-image2 {
+        position: unset;
+        border-radius: 25px;
+        width: 150px;
+        height: 200px;
+    }
+
+    #about-image1 {
+        position: unset;
+        border-radius: 25px;
+        width: 150px;
+        height: 200px;
+        right: 100px;
+        top: 100px;
+    }
+}

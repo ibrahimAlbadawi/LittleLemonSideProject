@@ -5,9 +5,9 @@ const About = () => {
     return (
         <div id="about-container">
             <div id="about-text">
-                <h1>Little Lemon</h1>
-                <h3>Chicago</h3>
-                <p>
+                <h1 id="about-h1">Little Lemon</h1>
+                <h3 id="about-h3">Chicago</h3>
+                <p id="about-p">
                     Little Lemon was founded by two siblings with a shared
                     passion for Mediterranean cuisine and family traditions.
                     Inspired by cherished recipes passed down through

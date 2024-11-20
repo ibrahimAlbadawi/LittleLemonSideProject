@@ -13,9 +13,32 @@
     justify-content: center;
 }
 
-
 #message {
     grid-area: message;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 393px) {
+    #testamonials-container {
+        padding: 50px 30px 50px 30px;
+        height: auto;
+        background-color: #fdf4ee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #message {
+        padding-top: 20px;
+        grid-area: message;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+    }
+
+    #testamonials-header {
+        padding-bottom: 10px;
+    }
 }
