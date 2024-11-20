@@ -153,7 +153,7 @@ const BookingForm = (props) => {
 
     return (
         <div id="booking-form">
-            <h1>Reserve a table</h1>
+            <h1 id="booking-header">Reserve a table</h1>
             <form onSubmit={handleSubmit}>
                 <div id="inputs">
                     <label htmlFor="firstName">First Name*</label>

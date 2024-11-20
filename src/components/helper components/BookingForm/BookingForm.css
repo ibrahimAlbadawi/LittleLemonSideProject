@@ -5,6 +5,13 @@ form {
     align-items: center;
 }
 
+#booking-header {
+    font-family: "Markazi Text";
+    color: #495e57;
+    font-weight: 600;
+    font-size: 60px;
+}
+
 form label {
     font-family: "Karla";
     font-weight: 600;
@@ -83,4 +90,20 @@ select:hover {
     padding-bottom: 10px;
     font-size: 13px;
     color: #ad0000;
+}
+
+@media  screen and (max-width: 393px) {
+    #inputs {
+        width: 80%;
+    }
+
+    #booking-button {
+
+        width: 60%;
+
+    }
+
+    #booking-button:hover {
+        width: 60%;
+    }
 }
