@@ -8,7 +8,7 @@ import "./App.css";
 import LandingPage from "./components/LandingPage/LandingPage.js";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 const App = () => {
     const [infos, setInfos] = useState({
         firstName: "",
@@ -83,6 +83,7 @@ const App = () => {
                     </Route>
                 </Routes>
             </BrowserRouter>{" "}
+            <SpeedInsights/>
         </div>
     );
 };
